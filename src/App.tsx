@@ -3,9 +3,9 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import Coverage from './components/Coverage'
+import Pricing from './components/Pricing'
 
 const sections = [
-  { id: 'pricing' },
   { id: 'testimonials' },
   { id: 'contact' }
 ]
@@ -20,6 +20,7 @@ export default function App(){
         <Services />
         <WhyUs />
         <Coverage />
+        <Pricing />
         {sections.map(({id}) => (
           <section
             key={id}
