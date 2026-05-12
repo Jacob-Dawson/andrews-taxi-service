@@ -1,9 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import WhyUs from './components/WhyUs'
 
 const sections = [
-  { id: 'why-us' },
   { id: 'coverage' },
   { id: 'pricing' },
   { id: 'testimonials' },
@@ -18,6 +18,7 @@ export default function App(){
       <main>
         <Hero />
         <Services />
+        <WhyUs />
         {sections.map(({id}) => (
           <section
             key={id}
