@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 const sections = [
-  { id: 'hero' },
   { id: 'services' },
   { id: 'why-us' },
   { id: 'coverage' },
@@ -16,6 +16,7 @@ export default function App(){
     <div className="min-h-screen bg-bg text-text font-body">
       <Navbar />
       <main>
+        <Hero />
         {sections.map(({id}) => (
           <section
             key={id}
