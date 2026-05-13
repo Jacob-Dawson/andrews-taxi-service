@@ -4,9 +4,9 @@ import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import Coverage from './components/Coverage'
 import Pricing from './components/Pricing'
+import Testimonials from './components/Testimonials'
 
 const sections = [
-  { id: 'testimonials' },
   { id: 'contact' }
 ]
 
@@ -21,6 +21,7 @@ export default function App(){
         <WhyUs />
         <Coverage />
         <Pricing />
+        <Testimonials />
         {sections.map(({id}) => (
           <section
             key={id}
