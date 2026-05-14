@@ -9,7 +9,9 @@ const navLinks = [
     { label: 'Contact',     href: '#contact'}
 ]
 
-export default function Navbar(){
+interface Props { onBook: () => void }
+
+export default function Navbar({onBook}: Props){
 
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
@@ -51,17 +53,17 @@ export default function Navbar(){
 
                 {/* Desktop CTA */}
 
-                <a
-                    href="#booking"
+                <button
+                    onClick={onBook}
                     className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300"
                 >
                     Book a ride
-                </a>
+                </button>
 
                 {/* Mobile hamburger */}
                 <button
                     className="md:hidden flex flex-col gap-1.5 p-2"
-                    onClick={() => setMenuOpen(prev => !prev)}
+                    onClick={() => setMenuOpen((prev) => !prev)}
                     aria-label="Toggle menu"
                 >
                     <span className={`block w-6 h-px bg-text transition-transform duration-300 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
@@ -86,13 +88,12 @@ export default function Navbar(){
                         </li>
                     ))}
                     <li>
-                        <a 
-                            href="#booking"
+                        <button
                             className="inline-flex items-center px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300"
-                            onClick={() => setMenuOpen(false)}
+                            onClick={() => {setMenuOpen(false); onBook()}}
                         >
                             Book a Ride
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>

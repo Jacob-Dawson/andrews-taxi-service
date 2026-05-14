@@ -1,4 +1,10 @@
-export default function Hero(){
+interface Props {
+
+    onBook: () => void
+
+}
+
+export default function Hero({onBook}: Props){
 
     return (
         <section
@@ -14,7 +20,7 @@ export default function Hero(){
             <div
                 className="absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage:    `linear-gradient(var(--color-gold) 1px transparent 1px),
+                    backgroundImage:    `linear-gradient(var(--color-gold) 1px, transparent 1px),
                                         linear-gradient(90deg, var(--color-gold) 1px, transparent 1px)`,
                     backgroundSize:     '60px 60px'
                 }}
@@ -49,12 +55,11 @@ export default function Hero(){
 
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
-                    <a 
-                        href="#booking"
+                    <button onClick={onBook} 
                         className="w-full sm:w-auto px-8 py-3.5 bg-gold text-bg text-sm font-medium tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
                     >
                         Book a Ride
-                    </a>
+                    </button>
 
                     <a
                         href="#pricing"
