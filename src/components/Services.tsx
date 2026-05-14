@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 const services = [
     {
         title: 'Airport Transfers',
@@ -66,7 +68,7 @@ export default function Services(){
             <div className="max-w-7xl mx-auto">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-16">
+                <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold"/>
                         <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">What We Offer</span>
@@ -78,10 +80,10 @@ export default function Services(){
                     <p className="text-muted font-llight max-w-lg leading-relaxed">
                         From a quick local trip to a cross-country transfer, we have a service built around your needs.
                     </p>
-                </div>
+                </Reveal>
 
                 {/* Cards grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+                <Reveal delay={150} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
                     {services.map(({ title, description, icon}) => (
                         <div
                             key={title}
@@ -97,7 +99,7 @@ export default function Services(){
                             <div className="mt-auto pt-4 border-t border-border w-8 group-hover:w-full transition-all duration-500"/>
                         </div>
                     ))}
-                </div>
+                </Reveal>
 
             </div>
         </section>

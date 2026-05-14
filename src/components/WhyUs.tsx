@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 const stats = [
     { value: '10+', label: 'Years on the road' },
     { value: '5,000+', label: 'Rides completed' },
@@ -32,7 +34,7 @@ export default function WhyUs(){
             <div className="max-w-7xl mx-auto">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-16">
+                <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold"/>
                         <span className="text-gold text-xs tracking-[0.3em] uppercast font-body font-medium">Why Choose Us</span>
@@ -41,10 +43,10 @@ export default function WhyUs(){
                     <h2 className="font-display font-light text-4xl sm:text-5xl text-text">
                         The Difference Is in the <span className="italic text-gold">Detail</span>
                     </h2>
-                </div>
+                </Reveal>
 
                 {/* Bento grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-border">
+                <Reveal delay={150} className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-border">
 
                     {/* Feature card - spans 1 col, 2 rows on large */}
                     <div className="lg:row-span-2 bg-surface relative overflow-hidden flex flex-col justify-between p-10 min-h-80">
@@ -90,7 +92,7 @@ export default function WhyUs(){
                         </div>
                     ))}
 
-                </div>
+                </Reveal>
 
             </div>
         </section>

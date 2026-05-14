@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 const testimonials = [
     {
         quote:
@@ -69,7 +71,7 @@ export default function Testimonials(){
             <div className="max-w-7xl mx-auto">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-16">
+                <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold"/>
                         <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">Client Reviews</span>
@@ -78,10 +80,10 @@ export default function Testimonials(){
                     <h2 className="font-display font-light text-4xl sm:text-5xl text-text">
                         Trusted by <span className="italic text-gold">Thousands</span>
                     </h2>
-                </div>
+                </Reveal>
 
                 {/* Featured quote */}
-                <div className="relative bg-surface border border-border p-10 sm:p-14 mb-px overflow-hidden">
+                <Reveal delay={100} className="relative bg-surface border border-border p-10 sm:p-14 mb-px overflow-hidden">
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"/>
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_0%_80%,rgba(201,169,110,0.06),transparent)]"/>
 
@@ -105,10 +107,10 @@ export default function Testimonials(){
                             </div>
                         </div>
                     </div>
-                </div>
+                </Reveal>
 
                 {/* Review grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+                <Reveal delay={200} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
                     {rest.map(({quote, name, context, rating}) => (
                         <div
                             key={name}
@@ -129,7 +131,7 @@ export default function Testimonials(){
                             </div>
                         </div>
                     ))}
-                </div>
+                </Reveal>
 
             </div>
         </section>

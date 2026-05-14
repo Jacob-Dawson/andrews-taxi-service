@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 interface Props {
 
     onBook: () => void
@@ -5,6 +7,19 @@ interface Props {
 }
 
 export default function Hero({onBook}: Props){
+
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        const t = setTimeout(() => setLoaded(true), 80)
+        return () => clearTimeout(t)
+    }, [])
+
+    const fade = (delay: number): React.CSSProperties => ({
+        opacity:    loaded ? 1 : 0,
+        transform:  loaded ? 'translateY(0)' : 'translateY(22px)',
+        transition: `opacity 0.8s ease ${delay}ms, transform 0.8s ease ${delay}ms`
+    })
 
     return (
         <section
@@ -33,7 +48,7 @@ export default function Hero({onBook}: Props){
             <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center gap-8">
 
                 {/* Eyebrow */}
-                <div className="flex items-center gap-3">
+                <div style={fade(100)} className="flex items-center gap-3">
                     <span className="block w-8 h-px bg-gold"/>
                     <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">
                         Est. in your City
@@ -42,20 +57,21 @@ export default function Hero({onBook}: Props){
                 </div>
 
                 {/* Headline */}
-                <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight">
+                <h1 style={fade(220)} className="font-display font-light text-5xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight">
                     <span className="block text-text">Your Journey</span>
                     <span className="block text-gold italic">Handled with</span>
                     <span className="block text-text">Precision</span>
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-muted font-body font-light text-base sm:text-lg max-w-xl leading-relaxed">
+                <p style={fade(380)} className="text-muted font-body font-light text-base sm:text-lg max-w-xl leading-relaxed">
                     Professional private hire across the region - airport transfers, corporate travel, and late-night runs. Always on time, always immaculate.
                 </p>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
-                    <button onClick={onBook} 
+                <div style={fade(500)} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
+                    <button 
+                        onClick={onBook} 
                         className="w-full sm:w-auto px-8 py-3.5 bg-gold text-bg text-sm font-medium tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
                     >
                         Book a Ride
@@ -71,7 +87,7 @@ export default function Hero({onBook}: Props){
                 </div>
 
                 {/* Trust strip */}
-                <div className="flex flex-wrap justify-center items-center gap-6 mt-4 text-xs text-muted tracking-widest uppercase">
+                <div style={fade(620)} className="flex flex-wrap justify-center items-center gap-6 mt-4 text-xs text-muted tracking-widest uppercase">
                     <span>✦ Licensed & Insured</span>
                     <span>✦ Fixed Fares</span>
                     <span>✦ 24 / 7 Availability</span>
@@ -80,7 +96,7 @@ export default function Hero({onBook}: Props){
             </div>
 
             {/* Scroll cue */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted">
+            <div style={fade(750)} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted">
                 <span className="text-[10px] tracking-[0.25em] uppercase">Scroll</span>
                 <div className="w-px h-8 bg-gradient-to-b from-muted to-transparent animate-pulse"/>
             </div>

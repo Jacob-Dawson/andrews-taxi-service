@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 const airports = [
     'Heathrow (LHR)',
     'Gatwick (LGW)',
@@ -41,7 +43,7 @@ export default function Coverage(){
             <div className="max-w-7xl mx-auto">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-16">
+                <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold"/>
                         <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">Where We Go</span>
@@ -54,10 +56,10 @@ export default function Coverage(){
                         Based in the Midlands, we cover all major airports and destinations across England.
                         Not sure if we reach you? Just call.
                     </p>
-                </div>
+                </Reveal>
 
                 {/* Main layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border">
+                <Reveal delay={150} className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border">
 
                     {/* Decorative map panel */}
                     <div className="bg-surface relative overflow-hidden min-h-96 flex items-center justify-center p-10">
@@ -180,7 +182,7 @@ export default function Coverage(){
                         </div>
                     </div>
 
-                </div>
+                </Reveal>
 
             </div>
         </section>

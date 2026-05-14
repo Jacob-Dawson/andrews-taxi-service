@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 interface Props{
     onBook: () => void
 }
@@ -41,7 +43,7 @@ export default function Contact({onBook}: Props){
             <div className="max-w-4xl mx-auto relative z-10">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-16">
+                <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold" />
                         <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">Get in Touch</span>
@@ -54,10 +56,10 @@ export default function Contact({onBook}: Props){
                         No holding music, no bots. Call or text Andrew directly and
                         get a confirmed fare within minutes.
                     </p>
-                </div>
+                </Reveal>
 
                 {/* Big phone CTA */}
-                <div className="flex flex-col items-center gap-6 mb-16">
+                <Reveal delay={100} className="flex flex-col items-center gap-6 mb-16">
                     <a
                         href="tel:+441234567890"
                         className="group font-display text-4xl sm:text-6xl text-gold hover:text-gold-light transition-colors duration-300 tracking-tight"
@@ -78,10 +80,10 @@ export default function Contact({onBook}: Props){
                             Book Online
                         </button>
                     </div>
-                </div>
+                </Reveal>
 
                 {/* Detail grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border border border-border">
+                <Reveal delay={200} className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border border border-border">
                 {details.map(({ label, value, href, note }) => (
                     <div key={label} className="bg-bg hover:bg-surface transition-colors duration-200 p-7 flex flex-col gap-2">
                         <span className="text-xs tracking-[0.2em] uppercase text-gold">{label}</span>
@@ -95,7 +97,7 @@ export default function Contact({onBook}: Props){
                         <span className="text-muted text-xs">{note}</span>
                     </div>
                 ))}
-                </div>
+                </Reveal>
 
             </div>
         </section>
