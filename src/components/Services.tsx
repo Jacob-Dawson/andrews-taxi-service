@@ -77,7 +77,7 @@ export default function Services(){
                     <h2 className="font-display font-light text-4xl sm:text-5xl text-text">
                         Every Journey, <span className="italic text-gold">Covered</span>
                     </h2>
-                    <p className="text-muted font-llight max-w-lg leading-relaxed">
+                    <p className="text-muted font-light max-w-lg leading-relaxed">
                         From a quick local trip to a cross-country transfer, we have a service built around your needs.
                     </p>
                 </Reveal>

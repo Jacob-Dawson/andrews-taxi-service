@@ -37,7 +37,7 @@ export default function WhyUs(){
                 <Reveal className="flex flex-col items-center text-center gap-4 mb-16">
                     <div className="flex items-center gap-3">
                         <span className="block w-8 h-px bg-gold"/>
-                        <span className="text-gold text-xs tracking-[0.3em] uppercast font-body font-medium">Why Choose Us</span>
+                        <span className="text-gold text-xs tracking-[0.3em] uppercase font-body font-medium">Why Choose Us</span>
                         <span className="block w-8 h-px bg-gold"/>
                     </div>
                     <h2 className="font-display font-light text-4xl sm:text-5xl text-text">
@@ -81,7 +81,7 @@ export default function WhyUs(){
                     {reasons.map(({title, description}) => (
                         <div
                             key={title}
-                            className="group bg-bg hover:bg-surface transition-colors duration-300 flex flex-col gap-4"
+                            className="group bg-bg hover:bg-surface transition-colors duration-300 p-8 flex flex-col gap-4"
                         >
                             <div className="flex items-start gap-3">
                                 <span className="mt-1.5 block w-2 h-2 bg-gold shrink-0"/>

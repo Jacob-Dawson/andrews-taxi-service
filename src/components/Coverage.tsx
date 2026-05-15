@@ -177,7 +177,7 @@ export default function Coverage(){
                                 href="tel:+44 (0) 1234-567-890"
                                 className="text-gold text-sm tracking-wider hover:text-gold-light transition-colors duration-200 whitespace-nowrap"
                             >
-                                ++44 (0) 1234-567-890 →
+                                +44 (0) 1234-567-890 →
                             </a>
                         </div>
                     </div>

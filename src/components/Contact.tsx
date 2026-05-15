@@ -8,7 +8,7 @@ const details = [
     {
         label: 'Phone',
         value: '+44 (0) 1234 567 890',
-        href: 'tel: +441234567890',
+        href: 'tel:+441234567890',
         note: 'Call or text, any time'
     },
     {
