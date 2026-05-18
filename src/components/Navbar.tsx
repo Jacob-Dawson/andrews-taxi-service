@@ -55,7 +55,7 @@ export default function Navbar({onBook}: Props){
 
                 <button
                     onClick={onBook}
-                    className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300"
+                    className="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300 cursor-pointer"
                 >
                     Book a ride
                 </button>
@@ -89,7 +89,7 @@ export default function Navbar({onBook}: Props){
                     ))}
                     <li>
                         <button
-                            className="inline-flex items-center px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300"
+                            className="inline-flex items-center px-5 py-2 border border-gold text-gold text-sm tracking-wider hover:bg-gold hover:text-bg transition-all duration-300 cursor-pointer"
                             onClick={() => {setMenuOpen(false); onBook()}}
                         >
                             Book a Ride

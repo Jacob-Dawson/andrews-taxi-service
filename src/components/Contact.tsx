@@ -75,7 +75,7 @@ export default function Contact({onBook}: Props){
                         </a>
                         <button
                             onClick={onBook}
-                            className="w-full sm:w-auto px-8 py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300"
+                            className="w-full sm:w-auto px-8 py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300 cursor-pointer"
                         >
                             Book Online
                         </button>

@@ -84,53 +84,57 @@ export default function Testimonials(){
 
                 {/* Featured quote */}
                 <Reveal delay={100} className="relative bg-surface border border-border p-10 sm:p-14 mb-px overflow-hidden">
-                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"/>
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_0%_80%,rgba(201,169,110,0.06),transparent)]"/>
+                    <div className="relative bg-surface p-10 sm:p-14 border-b border-border overflow-hidden">
+                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"/>
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_0%_80%,rgba(201,169,110,0.06),transparent)]"/>
 
-                    {/* Large decorative quote mark */}
-                    <span className="absolute top-6 right-10 font-display text-[8rem] leading-none text-gold/10 select-none">
-                        "
-                    </span>
+                        {/* Large decorative quote mark */}
+                        <span className="absolute top-6 right-10 font-display text-[8rem] leading-none text-gold/10 select-none">
+                            "
+                        </span>
 
-                    <div className="relative z-10 max-w-3xl flex flex-col gap-6">
-                        <Stars count={featured.rating} />
-                        <blockquote className="font-display text-2xl sm:text-3xl font-light text-text leading-relaxed">
-                            "{featured.quote}"
-                        </blockquote>
-                        <div className="flex items-center gap-4 pt-2 border-t border-border">
-                            <div className="w-8 h-8 bg-gold/20 border border-gold/30 flex items-center justify-center">
-                                <span className="font-display text-gold text-sm">{featured.name[0]}</span>
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-text text-sm font-medium">{featured.name}</span>
-                                <span className="text-muted text-xs">{featured.context}</span>
+                        <div className="relative z-10 max-w-3xl flex flex-col gap-6">
+                            <Stars count={featured.rating} />
+                            <blockquote className="font-display text-2xl sm:text-3xl font-light text-text leading-relaxed">
+                                "{featured.quote}"
+                            </blockquote>
+                            <div className="flex items-center gap-4 pt-2 border-t border-border">
+                                <div className="w-8 h-8 bg-gold/20 border border-gold/30 flex items-center justify-center">
+                                    <span className="font-display text-gold text-sm">{featured.name[0]}</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-text text-sm font-medium">{featured.name}</span>
+                                    <span className="text-muted text-xs">{featured.context}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </Reveal>
+                
 
-                {/* Review grid */}
-                <Reveal delay={200} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
-                    {rest.map(({quote, name, context, rating}) => (
-                        <div
-                            key={name}
-                            className="group bg-bg hover:bg-surface transition-colors duration-300 p-7 flex flex-col gap-5"
-                        >
-                            <Stars count={rating} />
-                            <blockquote className="text-muted font-light text-sm leading-relaxed flex-1">
-                                "{quote}"
-                            </blockquote>
-                            <div className="flex items-center gap-3 pt-4 border-t border-border">
-                                <div className="w-7 h-7 bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
-                                    <span className="font-display text-gold text-xs">{name[0]}</span>
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-text text-xs font-medium">{name}</span>
-                                    <span className="text-muted text-xs">{context}</span>
+                    {/* Review grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+                        {rest.map(({quote, name, context, rating}) => (
+                            <div
+                                key={name}
+                                className="group bg-bg hover:bg-surface transition-colors duration-300 p-7 flex flex-col gap-5"
+                            >
+                                <Stars count={rating} />
+                                <blockquote className="text-muted font-light text-sm leading-relaxed flex-1">
+                                    "{quote}"
+                                </blockquote>
+                                <div className="flex items-center gap-3 pt-4 border-t border-border">
+                                    <div className="w-7 h-7 bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
+                                        <span className="font-display text-gold text-xs">{name[0]}</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-text text-xs font-medium">{name}</span>
+                                        <span className="text-muted text-xs">{context}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
                 </Reveal>
 
             </div>

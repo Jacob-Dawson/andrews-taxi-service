@@ -65,7 +65,7 @@ export default function Pricing(){
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`px-8 py-3 text-sm tracking-widest uppercase transition-all duration-300 ${activeTab === tab ? 'bg-gold text-bg font-medium' : 'text-muted hover:text-gold'}`}
+                                className={`px-8 py-3 text-sm tracking-widest uppercase transition-all duration-300 cursor-pointer ${activeTab === tab ? 'bg-gold text-bg font-medium' : 'text-muted hover:text-gold'}`}
                             >
                                 {tab === 'airports' ? 'Airports' : 'Towns & Cities'}
                             </button>
@@ -105,7 +105,7 @@ export default function Pricing(){
                             out-of-hours, extra luggage, or meet &amp; greet services.
                         </p>
                         <a
-                            href="#booking"
+                            href="#contact"
                             className="whitespace-nowrap text-gold text-sm tracking-wider hover:text-gold-light transition-colors duration-200"
                         >
                             Get an exact quote →

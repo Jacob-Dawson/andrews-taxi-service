@@ -122,7 +122,7 @@ export default function BookingModal({ isOpen, onClose}: Props){
                         </div>
                         <button
                             onClick={handleClose}
-                            className="text-muted hover:text-text transition-colors p-1"
+                            className="text-muted hover:text-text transition-colors p-1 cursor-pointer"
                             aria-label="Close"
                         >
                             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -163,7 +163,7 @@ export default function BookingModal({ isOpen, onClose}: Props){
                                 <button
                                     onClick={() => setStep('details')}
                                     disabled={!journeyValid}
-                                    className="mt-2 w-full py-3.5 bg-gold text-bg text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="mt-2 w-full py-3.5 bg-gold text-bg text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                                 >
                                     Next: Your Details
                                 </button>
@@ -217,14 +217,14 @@ export default function BookingModal({ isOpen, onClose}: Props){
                                 <div className="flex gap-3 mt-2">
                                     <button
                                         onClick={() => setStep('journey')}
-                                        className="flex-1 py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300"
+                                        className="flex-1 py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300 cursor-pointer"
                                     >
                                         Back
                                     </button>
                                     <button
                                         onClick={() => setStep('confirmed')}
                                         disabled={!detailsValid}
-                                        className="flex-[2] py-3.5 bg-gold text-bg text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                                        className="flex-[2] py-3.5 bg-gold text-bg text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                                     >
                                         Confirm Booking
                                     </button>
@@ -264,7 +264,7 @@ export default function BookingModal({ isOpen, onClose}: Props){
                                 </div>
                                 <button
                                     onClick={handleClose}
-                                    className="w-full py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300"
+                                    className="w-full py-3.5 border border-border text-muted text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300 cursor-pointer"
                                 >
                                     Close
                                 </button>

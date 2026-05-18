@@ -72,7 +72,7 @@ export default function Hero({onBook}: Props){
                 <div style={fade(500)} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
                     <button 
                         onClick={onBook} 
-                        className="w-full sm:w-auto px-8 py-3.5 bg-gold text-bg text-sm font-medium tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
+                        className="w-full sm:w-auto px-8 py-3.5 bg-gold text-bg text-sm font-medium tracking-widest uppercase hover:bg-gold-light transition-colors duration-300 cursor-pointer"
                     >
                         Book a Ride
                     </button>
