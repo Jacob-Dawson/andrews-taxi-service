@@ -26,6 +26,14 @@ export default function Hero({onBook}: Props){
             id="hero"
             className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
         >
+            {/* Background photo */}
+            <img
+                src="/images/hero.jpg"
+                alt="A black cab"
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          
             {/* Atmospheric background layers */}
             <div className="absolute inset-0 bg-bg" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_120%,rgba(201,169,110,0.12),transparent)]" />

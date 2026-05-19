@@ -51,6 +51,18 @@ export default function WhyUs(){
                     {/* Feature card - spans 1 col, 2 rows on large */}
                     <div className="lg:row-span-2 bg-surface relative overflow-hidden flex flex-col justify-between p-10 min-h-80">
 
+                        {/* Car image - top half of card */}
+                        <div className="relative h-48 lg:h-56 overflow-hidden shrink-0">
+                            <img
+                                src="/images/car-interior.jpg"
+                                alt="Premium vehicle interior"
+                                className="w-full h-full object-cover object-center"
+                            />
+
+                            {/* Gradient fade into card body */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface" />
+                        </div>
+
                         {/* Background glow */}
                         <div className="absolute bottom-0 left-0 right-0 h-64 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(201,169,110,0.15),transparent)]" />
 

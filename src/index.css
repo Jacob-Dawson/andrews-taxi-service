@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
-:root{
+@theme{
   
   --color-bg:         #0C0C10;
   --color-surface:    #13131A;
@@ -16,27 +16,27 @@
 
 }
 
-*, *::before, *::after {
-
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-}
-
-html {
-
-  scroll-behavior: smooth;
+:root{
+  
+  --color-bg:         #0C0C10;
+  --color-surface:    #13131A;
+  --color-border:     #2A2A35;
+  --color-gold:       #C9A96E;
+  --color-gold-light: #E2C99A;
+  --color-text:       #F0EBE1;
+  --color-muted:      #8A8590;
 
 }
 
-body{
-
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html  { scroll-behavior: smooth; }
+  body  {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 @layer utilities {
@@ -44,6 +44,7 @@ body{
   .bg-surface      { background-color: var(--color-surface); }
   .bg-gold         { background-color: var(--color-gold); }
   .bg-gold-light   { background-color: var(--color-gold-light); }
+  .bg-border       { background-color: var(--color-border);}
 
   .text-gold       { color: var(--color-gold); }
   .text-gold-light { color: var(--color-gold-light); }
