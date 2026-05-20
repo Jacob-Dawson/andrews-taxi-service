@@ -35,7 +35,13 @@ export default function Hero({onBook}: Props){
             />
           
             {/* Atmospheric background layers */}
-            <div className="absolute inset-0 bg-bg" />
+            <div className="absolute inset-0 style={{
+                backgroundColor: 'rgba(0,0,0,0.93)'
+            }}" />
+            <div
+                className="absolute inset-0"
+                style={{ background: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,0.8) 0%, transparent 100%)' }}
+            />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_120%,rgba(201,169,110,0.12),transparent)]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_20%_20%,rgba(201,169,110,0.04),transparent)]" />
 
@@ -53,7 +59,8 @@ export default function Hero({onBook}: Props){
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"/>
 
             {/* Content */}
-            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center gap-8">
+            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center gap-8"
+            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8)' }}>
 
                 {/* Eyebrow */}
                 <div style={fade(100)} className="flex items-center gap-3">
